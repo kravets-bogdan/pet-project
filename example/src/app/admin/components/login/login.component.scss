@@ -1,0 +1,28 @@
+@import "../../../../styles/variables.scss";
+
+section {
+  position: relative;
+  height: 100vh;
+}
+
+form {
+  left: calc(50% - 100px);
+  top: calc(50% - 150px);
+  position: absolute;
+}
+
+.button {
+  border-radius: 10px;
+  height: 30px;
+}
+
+.errorMes {
+  background-color: $c-grey;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px 0;
+  color: $c-red;
+  width: 100%;
+}

@@ -1,0 +1,67 @@
+@import "../../../../styles//variables.scss";
+@import "../../../../styles//media.scss";
+
+:host {
+  @include media("<=tablet") {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.error {
+  text-align: end;
+  color: $c-red;
+  height: 20px;
+
+  @include media("<=tablet") {
+    font-size: 8px;
+    height: 10px;
+  }
+}
+
+label {
+  flex-direction: column;
+  position: relative;
+  display: flex;
+}
+
+.label {
+  margin-bottom: 20px;
+}
+
+.pattern-error {
+  background-color: $c-white;
+  align-items: flex-start;
+  flex-direction: column;
+  top: calc(50% - 40px);
+  position: absolute;
+  border-radius: 5px;
+  max-width: 260px;
+  color: $c-red;
+  display: flex;
+  left: -270px;
+  padding: 0 5px;
+  width: 100%;
+
+  @include media("<=desktop") {
+    font-size: 12px;
+    max-width: 140px;
+    left: -145px;
+  }
+
+  @include media("<=phone") {
+    top: calc(50% - 20px);
+    max-width: 90px;
+    font-size: 7px;
+    left: -95px;
+  }
+}
+
+span {
+  margin-bottom: 5px;
+}
+
+.text {
+  margin-bottom: 0;
+  padding: 5px 0;
+}

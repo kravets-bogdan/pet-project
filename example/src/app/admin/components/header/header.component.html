@@ -1,0 +1,20 @@
+<header>
+  <div class="logo">
+    <h1><a routerLink="/">Angular Admin</a></h1>
+  </div>
+  <div>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/admin/dashboard">home</a>
+        </li>
+        <li>
+          <a routerLink="/admin/create">create</a>
+        </li>
+        <li>
+          <a (click)="logout($event)">logout</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

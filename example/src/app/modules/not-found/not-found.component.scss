@@ -1,0 +1,29 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/media.scss";
+@import "../../../styles/variables";
+
+section {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+span {
+  color: rgba($c-light-grey, 0.2);
+  font-family: $ff-poppins;
+  font-size: em(300);
+  font-weight: 700;
+  line-height: 1;
+
+  @include media("<=tablet") {
+    font-size: em(250);
+  }
+
+  @include media("<=phone") {
+    font-size: em(175);
+  }
+}
+
+a {
+  min-width: 150px;
+}

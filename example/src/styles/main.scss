@@ -1,0 +1,113 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./media.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $ff-base, Roboto, "Helvetica Neue", sans-serif;
+  background-color: $c-silver;
+  font-size: $fs-base + px;
+  color: $c-light-grey;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.button {
+  transition: opacity $t-normal;
+  text-transform: uppercase;
+  font-family: $ff-poppins;
+  justify-content: center;
+  background: $c-dark-red;
+  letter-spacing: 1px;
+  align-items: center;
+  font-size: em(12);
+  line-height: 22px;
+  max-width: 200px;
+  font-weight: 700;
+  cursor: pointer;
+  color: $c-white;
+  display: flex;
+  height: 60px;
+  border: none;
+  width: 100%;
+
+  @include media("<=tablet") {
+    font-size: em(10);
+    font-weight: 600;
+    height: 30px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+input {
+  border: 1px solid $c-light-grey;
+  transition: opacity $t-normal;
+  background: $c-white;
+  border-radius: 20px;
+  font-size: em(14);
+  line-height: 20px;
+  max-width: 400px;
+  font-weight: 400;
+  padding: 0 10px;
+  outline: none;
+  height: 40px;
+  width: 100%;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    border-color: $c-red;
+  }
+
+  &::placeholder {
+    color: $c-light-grey;
+  }
+
+  @include media("<=tablet") {
+    max-width: 200px;
+    height: 30px;
+  }
+
+  @include media("<=phone") {
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/media.scss";
+
+section {
+  flex-direction: column;
+  display: flex;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 35px;
+  @include media("<=screen") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media("<=tablet") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media("<=phone") {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+h2 {
+  border-bottom: 1px solid $c-red;
+  color: $c-light-grey;
+  font-size: em(16);
+  line-height: 26px;
+  font-weight: 500;
+}
+
+span {
+  text-align: center;
+  line-height: 26px;
+  font-weight: 500;
+  color: $c-black;
+
+  @include media("<=phone") {
+    font-size: em(20);
+  }
+}
+
+.card {
+  transition: background-color $t-normal;
+  border-bottom: 1px solid $c-grey;
+  border-left: 1px solid $c-grey;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  display: flex;
+
+  &:hover {
+    background-color: rgba($c-black, 0.2);
+  }
+
+  @include media(">=screen") {
+    &:nth-child(4n),
+    &:last-child {
+      border-right: 1px solid $c-grey;
+    }
+  }
+
+  @include media("<=screen") {
+    &:nth-child(3n),
+    &:last-child {
+      border-right: 1px solid $c-grey;
+    }
+  }
+
+  @include media("<=tablet") {
+    &:nth-child(2n),
+    &:last-child {
+      border-right: 1px solid $c-grey;
+    }
+  }
+
+  @include media("<=phone") {
+    &:nth-child(1n),
+    &:last-child {
+      border-right: 1px solid $c-grey;
+    }
+  }
+}
+
+.load {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+}
+
+.search {
+  margin-bottom: 50px;
+  align-self: center;
+  display: flex;
+}

@@ -1,0 +1,16 @@
+<section *ngIf="item">
+  <div>
+    <a routerLink="/">BACK</a>
+  </div>
+  <div class="card">
+    <div class="info">
+      <h2>{{ item.name.en }}</h2>
+      <p>Price: {{ item.price | currency }}</p>
+      <p>Amount: {{ item.amount }}</p>
+    </div>
+    <p class="title">Desciption</p>
+    <p>
+      {{ item.description.en }}
+    </p>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/media.scss";
+
+header {
+  justify-content: space-between;
+  background-color: $c-red;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  padding: 20px;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+a {
+  transition: background-color $t-normal;
+  transition: color $t-normal;
+  text-transform: uppercase;
+  font-family: $ff-poppins;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  line-height: 22px;
+  font-size: em(12);
+  font-weight: 400;
+  color: $c-white;
+  padding: 5px;
+
+  &:hover {
+    color: $c-red;
+    background-color: $c-white;
+  }
+}

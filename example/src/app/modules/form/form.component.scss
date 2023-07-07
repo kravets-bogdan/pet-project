@@ -1,0 +1,68 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/media.scss";
+
+section {
+  padding-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: $c-black;
+}
+
+section {
+  justify-content: center;
+  display: flex;
+}
+
+.button-form {
+  border-radius: 20px;
+  min-width: 70px;
+  height: 40px;
+}
+
+.form-group {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  display: flex;
+
+  @include media("<=phone") {
+    flex-direction: column;
+  }
+}
+
+.button-grey {
+  background-color: $c-grey;
+  border-radius: 20px;
+  color: $c-black;
+  height: 40px;
+}
+
+.form-footer {
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+}
+
+.button {
+  @include media("<=tablet") {
+    height: 30px;
+  }
+}
+
+.retreat {
+  margin-right: 5px;
+
+  @include media("<=phone") {
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+}
+
+label {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}

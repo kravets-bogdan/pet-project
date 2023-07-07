@@ -1,0 +1,83 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/media.scss";
+
+.content {
+  margin-top: 50px;
+  overflow-x: auto;
+}
+
+.button-table {
+  background-color: $c-light-grey;
+  transition: opacity $t-normal;
+  text-transform: uppercase;
+  font-family: $ff-poppins;
+  max-width: fit-content;
+  min-width: fit-content;
+  letter-spacing: 1px;
+  height: fit-content;
+  line-height: 22px;
+  padding: 5px 5px;
+  font-weight: 700;
+  cursor: pointer;
+  color: $c-white;
+  border: none;
+}
+
+table {
+  min-width: 1000px;
+  width: 100%;
+  border: 0;
+}
+
+th {
+  border-bottom: 2px solid red;
+  padding: 10px 0px;
+
+  &:first-child {
+    text-align: start;
+  }
+
+  &:last-child {
+    text-align: center;
+  }
+}
+
+td {
+  display: table-cell;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  &:first-child {
+    text-align: start;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+tr {
+  &:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
+.message {
+  background-color: $c-grey;
+  justify-content: center;
+  right: calc(50% - 75px);
+  top: calc(50% - 20px);
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 600;
+  max-width: 150px;
+  padding: 10px 0;
+  color: $c-red;
+  display: flex;
+  height: 40px;
+  width: 100%;
+}

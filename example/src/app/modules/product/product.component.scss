@@ -1,0 +1,56 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+@import "../../../styles/media.scss";
+
+.card {
+  margin-top: 20px;
+}
+
+.info {
+  max-width: fit-content;
+}
+
+h2 {
+  border-bottom: 1px solid $c-red;
+  font-family: $ff-poppins;
+  margin-bottom: 10px;
+  line-height: 50px;
+  font-size: em(36);
+  font-weight: 700;
+  color: $c-black;
+
+  @include media("<=tablet") {
+    font-size: em(24);
+  }
+
+  @include media("<=phone") {
+    font-size: em(16);
+  }
+}
+
+.title {
+  font-family: $ff-poppins;
+  justify-content: end;
+  margin-bottom: 10px;
+  font-size: em(24);
+  line-height: 50px;
+  font-weight: 00;
+  margin-top: 15px;
+  color: $c-black;
+  display: flex;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  background-color: $c-red;
+  justify-content: center;
+  align-items: center;
+  max-width: 80px;
+  color: $c-white;
+  display: flex;
+  height: 40px;
+  width: 100%;
+}

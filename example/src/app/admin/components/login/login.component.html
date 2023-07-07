@@ -1,0 +1,32 @@
+<section>
+  <div class="content">
+    <!-- Authorization -->
+    <form [formGroup]="form">
+      <div class="errorMes">
+        <p>{{ errorMes ? errorMes : "Welcome" }}</p>
+      </div>
+      <!-- Email -->
+      <app-input
+        controlName="email"
+        [type]="InputTypes.EMAIL"
+        placeholder="Enter email"
+        [errors]="form.controls['email'].errors"
+      />
+      <!-- Password -->
+      <app-input
+        controlName="password"
+        [type]="InputTypes.PASSWORD"
+        placeholder="Enter password"
+        [errors]="form.controls['password'].errors"
+      />
+      <!-- Button submit -->
+      <button
+        class="button button-black"
+        type="submit"
+        (click)="loading ? null : submit()"
+      >
+        <span>Submit</span>
+      </button>
+    </form>
+  </div>
+</section>

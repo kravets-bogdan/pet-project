@@ -1,0 +1,33 @@
+<!-- Input -->
+<label [class]="class ? 'label' : null">
+  <span>{{ title }}</span>
+  <input
+    [type]="type"
+    [placeholder]="placeholder"
+    [formControlName]="controlName"
+  />
+  <div [class]="class ? class : 'error'">
+    <ng-container *ngIf="isControlValid() && errors">
+      <ng-container *ngIf="errors['required']"
+        ><span class="text">Це поле обов`язкове</span></ng-container
+      >
+      <ng-container *ngIf="errors['minlength']"
+        ><span class="text">
+          Мінімальна довжина імені -{{ errors["minlength"]["requiredLength"] }}
+        </span></ng-container
+      >
+      <ng-container *ngIf="errors['email']"
+        ><span class="text">Введіть правильні символи</span></ng-container
+      >
+      <ng-container *ngIf="errors['hasNumber']">
+        <span class="text">Пароль має мати цифру</span>
+      </ng-container>
+      <ng-container *ngIf="errors['hasWord']">
+        <span class="text">Пароль має мати букву</span>
+      </ng-container>
+      <ng-container *ngIf="errors['hasSpecialCharacters']">
+        <span class="text">Пароль має мати спеціальний символ</span>
+      </ng-container>
+    </ng-container>
+  </div>
+</label>

@@ -1,0 +1,57 @@
+<section>
+  <form [formGroup]="form" *ngIf="form">
+    <!-- Name items -->
+    <app-input
+      title="Title - UA"
+      controlName="nameUa"
+      [type]="InputTypes.TEXT"
+      placeholder="Enter name - UA"
+      [errors]="form.controls['nameUa'].errors"
+    />
+    <app-input
+      title="Title - EN"
+      controlName="nameEn"
+      [type]="InputTypes.TEXT"
+      placeholder="Enter name - EN"
+      [errors]="form.controls['nameEn'].errors"
+    />
+    <!-- Price -->
+    <app-input
+      title="Price"
+      controlName="price"
+      [type]="InputTypes.NUMBER"
+      placeholder="Enter price"
+      [errors]="form.controls['price'].errors"
+    />
+    <!-- Amount -->
+    <app-input
+      title="Amount"
+      controlName="amount"
+      [type]="InputTypes.NUMBER"
+      placeholder="Enter amount"
+      [errors]="form.controls['amount'].errors"
+    />
+    <!-- Description -->
+    <app-input
+      [type]="InputTypes.TEXT"
+      controlName="descriptionUa"
+      title="Enter description - UA"
+      placeholder="Enter description - UA"
+      [errors]="form.controls['descriptionUa'].errors"
+    />
+    <app-input
+      [type]="InputTypes.TEXT"
+      controlName="descriptionEn"
+      title="Enter description - EN"
+      placeholder="Enter description - EN"
+      [errors]="form.controls['description//En'].errors"
+    />
+    <button
+      type="submit"
+      class="button button-black"
+      (click)="loading ? null : submit()"
+    >
+      Submit
+    </button>
+  </form>
+</section>

@@ -1,0 +1,71 @@
+<section>
+  <form [formGroup]="form" class="form">
+    <h2>Regestration</h2>
+    <!-- First name -->
+    <app-input
+      title="First name"
+      controlName="firstName"
+      [type]="InputTypes.TEXT"
+      [errors]="form.controls['firstName'].errors"
+    />
+    <!-- Last name -->
+    <app-input
+      title="Last name"
+      controlName="lastName"
+      [type]="InputTypes.TEXT"
+      [errors]="form.controls['lastName'].errors"
+    />
+    <!-- Email -->
+    <app-input
+      title="Email"
+      controlName="email"
+      [type]="InputTypes.EMAIL"
+      [errors]="form.controls['email'].errors"
+    />
+    <!-- Password -->
+    <app-input
+      title="Password"
+      class="pattern-error"
+      controlName="password"
+      [type]="InputTypes.TEXT"
+      [errors]="form.controls['password'].errors"
+    />
+    <!-- Username -->
+    <app-input
+      title="Username"
+      controlName="username"
+      [type]="InputTypes.TEXT"
+      [errors]="form.controls['username'].errors"
+    />
+    <!-- From Array -->
+    <label formArrayName="phones">
+      <div
+        class="form-group"
+        *ngFor="let phones of phones.controls; let i = index"
+      >
+        <span class="retreat">Phone</span>
+        <input
+          maxlength="12"
+          class="retreat"
+          [formControlName]="i"
+          [type]="InputTypes.TEXT"
+        />
+
+        <button class="button button-form" (click)="deletePhone(i)">
+          Delete
+        </button>
+      </div>
+      <button class="button button-grey" (click)="addPhone()">Add phone</button>
+    </label>
+
+    <div class="form-footer">
+      <button
+        type="submit"
+        class="button button-grey"
+        (click)="loading ? null : submit()"
+      >
+        Registration
+      </button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,22 @@
+<header>
+  <!-- Logo -->
+  <div class="logo">
+    <h1 appStyle>Hello :)</h1>
+  </div>
+  <!-- Navigation -->
+  <nav *ngIf="isMobileMode ? isShowNavigation : true">
+    <ul>
+      <li *ngFor="let item of navigationList">
+        <a [routerLink]="item.route" (click)="isShowNavigation = false">{{
+          item.link
+        }}</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Burger -->
+  <app-burger
+    (toggle)="isShowNavigation = !isShowNavigation"
+    [isOpen]="isShowNavigation"
+    *ngIf="isMobileMode"
+  ></app-burger>
+</header>
